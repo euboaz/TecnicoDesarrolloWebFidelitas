@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <label id="unClick" class="badge badge-primary"> Un Click</label>
+    <label id="dobleClick" class="badge badge-secondary"> Doble Click</label>
+
+    <div id="contenedor">
+        <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum sunt dignissimos iusto iste, blanditiis nam,
+            dolores reiciendis recusandae optio iure officiis mollitia laboriosam reprehenderit debitis quasi? Expedita
+            commodi corrupti ipsam.</p>
+    </div>
+
+
+    <form>
+
+<input type="text" name="" id="campo1">
+<input type="text" name="" id="campo2">
+
+    </form>
+
+    <script type="text/javascript">
+
+        $("#unClick").click(function () {
+            //alert("Se activo con un click");
+            $("#contenedor").show();
+        });
+        $("#dobleClick").dblclick(function () {
+            //alert("Se activo con doble click");
+            $("#contenedor").hide();
+        });
+
+        $("#campo1").blur(function(){
+
+if (!$(this).val()) {
+    alert("Debe colocar informacion");
+    
+}
+
+});
+    </script>
+
+</body>
+
+</html>
